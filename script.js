@@ -97,10 +97,17 @@ e um evento de clique.
 document.getElementById("btnAnalisar").addEventListener("click", analisarRisco);
 
 function analisarRisco() {
-    
+    const risco = document.getElementById("risco").value;
+    const tipo = document.getElementById("tipo").value;
+    const probabilidade = document.getElementById("probabilidade").value;
+    const impacto = document.getElementById("impacto").value;
+
+    if (risco === "" || tipo === "" || probabilidade === "" || impacto === "") {
+        document.getElementById("mensagem").textContent =
+            "Preencha todos os campos para realizar a análise.";
+        return;
+    }
 }
-
-
 
 /*
 ==============================================================
