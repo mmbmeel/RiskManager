@@ -94,6 +94,11 @@ e um evento de clique.
 
 
 // TODO 1 - Implemente aqui
+document.getElementById("btnAnalisar").addEventListener("click", analisarRisco);
+
+function analisarRisco() {
+    
+}
 
 
 
