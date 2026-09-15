@@ -150,6 +150,17 @@ function analisarRisco() {
             recomendacao = "Priorizar ações para explorar a oportunidade.";
         }
     }
+
+    document.getElementById("pontuacao").textContent = pontuacao;
+    document.getElementById("classificacao").textContent = classificacao;
+
+    document.getElementById("mensagem").innerHTML = `
+        <strong>Risco:</strong> ${risco}<br>
+        <strong>Tipo:</strong> ${tipo === "ameaca" ? "Ameaça" : "Oportunidade"}<br>
+        <strong>Pontuação:</strong> ${pontuacao}<br>
+        <strong>Classificação:</strong> ${classificacao}<br>
+        <strong>Recomendação:</strong> ${recomendacao}
+    `;
 }
 
 /*
