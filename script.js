@@ -107,6 +107,8 @@ function analisarRisco() {
             "Preencha todos os campos para realizar a análise.";
         return;
     }
+
+    const pontuacao = Number(probabilidade) * Number(impacto);
 }
 
 /*
