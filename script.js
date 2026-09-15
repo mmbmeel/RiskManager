@@ -109,6 +109,23 @@ function analisarRisco() {
     }
 
     const pontuacao = Number(probabilidade) * Number(impacto);
+
+    let classificacao;
+    let classe;
+
+    if (pontuacao <= 4) {
+        classificacao = "BAIXO";
+        classe = "baixo";
+    } else if (pontuacao <= 9) {
+        classificacao = "MODERADO";
+        classe = "moderado";
+    } else if (pontuacao <= 16) {
+        classificacao = "ALTO";
+        classe = "alto";
+    } else {
+        classificacao = "CRÍTICO";
+        classe = "critico";
+    }
 }
 
 /*
