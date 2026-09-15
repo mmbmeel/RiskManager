@@ -161,6 +161,11 @@ function analisarRisco() {
         <strong>Classificação:</strong> ${classificacao}<br>
         <strong>Recomendação:</strong> ${recomendacao}
     `;
+
+    const resultado = document.getElementById("resultado");
+
+    resultado.classList.remove("baixo", "moderado", "alto", "critico");
+    resultado.classList.add(classe);
 }
 
 /*
