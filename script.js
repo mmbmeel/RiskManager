@@ -126,6 +126,30 @@ function analisarRisco() {
         classificacao = "CRÍTICO";
         classe = "critico";
     }
+
+    let recomendacao;
+
+    if (tipo === "ameaca") {
+        if (classificacao === "BAIXO") {
+            recomendacao = "Acompanhar o risco.";
+        } else if (classificacao === "MODERADO") {
+            recomendacao = "Monitorar e avaliar ações preventivas.";
+        } else if (classificacao === "ALTO") {
+            recomendacao = "Planejar uma resposta para redução do risco.";
+        } else {
+            recomendacao = "Priorizar imediatamente o tratamento deste risco.";
+        }
+    } else {
+        if (classificacao === "BAIXO") {
+            recomendacao = "Registrar e acompanhar a oportunidade.";
+        } else if (classificacao === "MODERADO") {
+            recomendacao = "Avaliar a viabilidade de aproveitamento.";
+        } else if (classificacao === "ALTO") {
+            recomendacao = "Planejar ações para potencializar a oportunidade.";
+        } else {
+            recomendacao = "Priorizar ações para explorar a oportunidade.";
+        }
+    }
 }
 
 /*
