@@ -1,0 +1,371 @@
+/* =========================================================
+   RISK MANAGER
+   Gestão de Projetos de TI
+   Arquivo de estilos fornecido pelo professor
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #eef4f8;
+    color: #123047;
+}
+
+
+/* ---------------------------------------------------------
+   CONTAINER PRINCIPAL
+   --------------------------------------------------------- */
+
+.container {
+    width: min(900px, 92%);
+    margin: 40px auto;
+}
+
+
+/* ---------------------------------------------------------
+   CABEÇALHO
+   --------------------------------------------------------- */
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    margin: 10px 0 6px;
+
+    font-size: 2.4rem;
+
+    color: #0b3558;
+}
+
+header p {
+    margin: 0;
+
+    color: #526b7d;
+}
+
+
+/* Pequena identificação acima do título */
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background-color: #dcecff;
+    color: #125ea8;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   CARDS
+   --------------------------------------------------------- */
+
+.card {
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 26px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 24px rgba(20, 55, 80, 0.10);
+}
+
+.card h2 {
+    margin-top: 0;
+
+    color: #123047;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPOS DO FORMULÁRIO
+   --------------------------------------------------------- */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+label {
+    font-weight: bold;
+
+    color: #29495f;
+}
+
+
+/* Organização dos três campos */
+
+.grade {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+
+/* Inputs e selects */
+
+input,
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #bdcbd5;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    color: #123047;
+
+    font-size: 1rem;
+}
+
+
+/* Destaque quando o campo recebe foco */
+
+input:focus,
+select:focus {
+    outline: 3px solid #d8eaff;
+
+    border-color: #1976d2;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO
+   --------------------------------------------------------- */
+
+button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #125ea8;
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+button:hover {
+    filter: brightness(0.92);
+
+    transform: translateY(-1px);
+}
+
+
+/* Efeito ao clicar */
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+/* ---------------------------------------------------------
+   ÁREA DE RESULTADO
+   --------------------------------------------------------- */
+
+.resultado {
+    border: 2px solid transparent;
+
+    transition: 0.3s;
+}
+
+
+/* Organização dos indicadores */
+
+.indicadores {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Cada indicador */
+
+.indicador {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background-color: #f4f7f9;
+}
+
+.indicador span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #667d8d;
+
+    font-size: 0.9rem;
+}
+
+.indicador strong {
+    font-size: 1.35rem;
+}
+
+
+/* ---------------------------------------------------------
+   MENSAGEM DA ANÁLISE
+   --------------------------------------------------------- */
+
+.mensagem {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background-color: #edf3f6;
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   LEGENDA DOS NÍVEIS
+   --------------------------------------------------------- */
+
+.legenda {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.nivel {
+    padding: 12px;
+
+    text-align: center;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   CLASSIFICAÇÕES DOS RISCOS
+
+   Estas classes deverão ser aplicadas pelo JavaScript.
+   --------------------------------------------------------- */
+
+
+/* BAIXO */
+
+.baixo {
+    background-color: #d8f3dc;
+
+    color: #176b34;
+}
+
+
+/* MODERADO */
+
+.moderado {
+    background-color: #fff3bf;
+
+    color: #765b00;
+}
+
+
+/* ALTO */
+
+.alto {
+    background-color: #ffe0b2;
+
+    color: #9a4b00;
+}
+
+
+/* CRÍTICO */
+
+.critico {
+    background-color: #ffd6d6;
+
+    color: #a31313;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVIDADE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .legenda {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .legenda {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}

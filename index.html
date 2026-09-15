@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Risk Manager - Análise de Riscos</title>
+
+    <!-- Arquivo CSS fornecido pelo professor -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- ==================================================
+             CABEÇALHO
+        =================================================== -->
+        <header>
+
+            <span class="tag">
+                Gestão de Projetos de TI
+            </span>
+
+            <h1>
+                🎮 Risk Manager
+            </h1>
+
+            <p>
+                Análise qualitativa de riscos por
+                probabilidade e impacto.
+            </p>
+
+        </header>
+
+
+        <!-- ==================================================
+             DADOS DO RISCO
+        =================================================== -->
+        <section class="card">
+
+            <h2>
+                🔎 Risco identificado
+            </h2>
+
+
+            <!-- Descrição do risco -->
+            <div class="campo">
+
+                <label for="risco">
+                    Descrição do risco
+                </label>
+
+                <input
+                    id="risco"
+                    type="text"
+                    placeholder="Ex.: Atraso na entrega dos servidores"
+                >
+
+            </div>
+
+
+            <div class="grade">
+
+
+                <!-- Tipo do risco -->
+                <div class="campo">
+
+                    <label for="tipo">
+                        Tipo do risco
+                    </label>
+
+                    <select id="tipo">
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                        <option value="ameaca">
+                            ⚠️ Ameaça
+                        </option>
+
+                        <option value="oportunidade">
+                            🚀 Oportunidade
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Probabilidade -->
+                <div class="campo">
+
+                    <label for="probabilidade">
+                        Probabilidade
+                    </label>
+
+                    <select id="probabilidade">
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                        <option value="1">
+                            1 - Muito Baixa
+                        </option>
+
+                        <option value="2">
+                            2 - Baixa
+                        </option>
+
+                        <option value="3">
+                            3 - Média
+                        </option>
+
+                        <option value="4">
+                            4 - Alta
+                        </option>
+
+                        <option value="5">
+                            5 - Muito Alta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Impacto -->
+                <div class="campo">
+
+                    <label for="impacto">
+                        Impacto
+                    </label>
+
+                    <select id="impacto">
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                        <option value="1">
+                            1 - Muito Baixo
+                        </option>
+
+                        <option value="2">
+                            2 - Baixo
+                        </option>
+
+                        <option value="3">
+                            3 - Médio
+                        </option>
+
+                        <option value="4">
+                            4 - Alto
+                        </option>
+
+                        <option value="5">
+                            5 - Muito Alto
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Botão que deverá acionar o JavaScript -->
+            <button
+                id="btnAnalisar"
+                type="button">
+
+                ANALISAR RISCO
+
+            </button>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESULTADO
+        =================================================== -->
+        <section
+            id="resultado"
+            class="card resultado">
+
+            <h2>
+                📊 Resultado da análise
+            </h2>
+
+
+            <div class="indicadores">
+
+
+                <!-- Pontuação calculada -->
+                <div class="indicador">
+
+                    <span>
+                        Pontuação
+                    </span>
+
+                    <strong id="pontuacao">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <!-- Classificação calculada -->
+                <div class="indicador">
+
+                    <span>
+                        Classificação
+                    </span>
+
+                    <strong id="classificacao">
+                        Aguardando análise
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mensagem gerada pelo JavaScript -->
+            <div
+                id="mensagem"
+                class="mensagem">
+
+                Preencha os dados acima e clique em
+                <strong>ANALISAR RISCO</strong>.
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             LEGENDA
+        =================================================== -->
+        <section class="legenda">
+
+            <span class="nivel baixo">
+                1–4 • Baixo
+            </span>
+
+            <span class="nivel moderado">
+                5–9 • Moderado
+            </span>
+
+            <span class="nivel alto">
+                10–16 • Alto
+            </span>
+
+            <span class="nivel critico">
+                17–25 • Crítico
+            </span>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+
+         Este arquivo deverá ser desenvolvido pelos alunos.
+    =================================================== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
